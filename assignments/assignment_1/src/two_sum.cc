@@ -1,7 +1,21 @@
+#include <unordered_map>
+
 #include "two_sum.hh"
 
+// https://leetcode.com/problems/two-sum/submissions/1965012909
 std::vector<int> two_sum(const std::vector<int> &nums, int target) {
-  // TODO: implement
+  std::unordered_map<int, int> indices;
+
+  for (int i = 0; i < nums.size(); i++) {
+    int remainder = target - nums[i];
+
+    if (indices.find(remainder) != indices.end()) {
+      return {indices[remainder], i};
+    }
+
+    indices[nums[i]] = i;
+  }
+
   return {};
 }
 
