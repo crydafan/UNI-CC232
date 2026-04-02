@@ -9,9 +9,8 @@ std::vector<int> two_sum(const std::vector<int> &nums, int target) {
   for (int i = 0; i < nums.size(); ++i) {
     int remainder = target - nums[i];
 
-    if (indices.find(remainder) != indices.end()) {
+    if (indices.find(remainder) != indices.end())
       return {indices[remainder], i};
-    }
 
     indices[nums[i]] = i;
   }
@@ -26,5 +25,6 @@ std::vector<int> two_sum_naive(const std::vector<int> &nums, int target) {
         return {i, j};
     }
   }
+
   return {};
 }
