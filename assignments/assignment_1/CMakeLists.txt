@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.20)
 add_executable(main src/main.cc)
 target_include_directories(main PUBLIC include)
 
+add_executable(two_sum_bench bench/two_sum_bench.cc src/two_sum.cc)
+target_include_directories(two_sum_bench PUBLIC include)
+
 add_executable(two_sum_basic_test tests/two_sum_basic_test.cc src/two_sum.cc)
 target_include_directories(two_sum_basic_test PUBLIC include)
 add_test(NAME two_sum_basic_test COMMAND two_sum_basic_test)
