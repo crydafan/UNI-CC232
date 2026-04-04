@@ -4,9 +4,11 @@
 
 #include "two_sum.hh"
 
+static constexpr size_t BENCH_VECTOR_ELEMENTS = 10000;
+
 int main() {
   std::vector<int> nums;
-  nums.resize(10000);
+  nums.resize(BENCH_VECTOR_ELEMENTS);
 
   for (int i = 0; i < nums.size(); ++i)
     nums[i] = i;
