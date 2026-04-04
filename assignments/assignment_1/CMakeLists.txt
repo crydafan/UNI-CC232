@@ -2,3 +2,35 @@ cmake_minimum_required(VERSION 3.20)
 
 add_executable(main src/main.cc)
 target_include_directories(main PUBLIC include)
+
+add_executable(two_sum_basic_test tests/two_sum_basic_test.cc src/two_sum.cc)
+target_include_directories(two_sum_basic_test PUBLIC include)
+add_test(NAME two_sum_basic_test COMMAND two_sum_basic_test)
+
+add_executable(two_sum_diff_indices_test tests/two_sum_diff_indices_test.cc src/two_sum.cc)
+target_include_directories(two_sum_diff_indices_test PUBLIC include)
+add_test(NAME two_sum_diff_indices_test COMMAND two_sum_diff_indices_test)
+
+add_executable(two_sum_dup_values_test tests/two_sum_dup_values_test.cc src/two_sum.cc)
+target_include_directories(two_sum_dup_values_test PUBLIC include)
+add_test(NAME two_sum_dup_values_test COMMAND two_sum_dup_values_test)
+
+add_executable(two_sum_no_solution_test tests/two_sum_no_solution_test.cc src/two_sum.cc)
+target_include_directories(two_sum_no_solution_test PUBLIC include)
+add_test(NAME two_sum_no_solution_test COMMAND two_sum_no_solution_test)
+
+add_executable(two_sum_naive_basic_test tests/two_sum_naive_basic_test.cc src/two_sum.cc)
+target_include_directories(two_sum_naive_basic_test PUBLIC include)
+add_test(NAME two_sum_naive_basic_test COMMAND two_sum_naive_basic_test)
+
+add_executable(two_sum_naive_diff_indices_test tests/two_sum_naive_diff_indices_test.cc src/two_sum.cc)
+target_include_directories(two_sum_naive_diff_indices_test PUBLIC include)
+add_test(NAME two_sum_naive_diff_indices_test COMMAND two_sum_naive_diff_indices_test)
+
+add_executable(two_sum_naive_dup_values_test tests/two_sum_naive_dup_values_test.cc src/two_sum.cc)
+target_include_directories(two_sum_naive_dup_values_test PUBLIC include)
+add_test(NAME two_sum_naive_dup_values_test COMMAND two_sum_naive_dup_values_test)
+
+add_executable(two_sum_naive_no_solution_test tests/two_sum_naive_no_solution_test.cc src/two_sum.cc)
+target_include_directories(two_sum_naive_no_solution_test PUBLIC include)
+add_test(NAME two_sum_naive_no_solution_test COMMAND two_sum_naive_no_solution_test)
