@@ -8,7 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-include_directories(common/include)
 add_subdirectory(assignment_1)
 # add_subdirectory(assignment_2)
 # add_subdirectory(assignment_3)
