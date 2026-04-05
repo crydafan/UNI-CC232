@@ -1,6 +1,7 @@
 #include <cstddef>
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 #include "two_sum.hh"
 
