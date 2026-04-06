@@ -1,7 +1,7 @@
+#include <chrono>
 #include <cstddef>
 #include <iostream>
 #include <vector>
-#include <chrono>
 
 #include "two_sum.hh"
 
@@ -12,11 +12,11 @@ int main() {
   std::vector<int> nums;
   nums.resize(BENCH_VECTOR_ELEMENTS);
 
-  for (int i = 0; i < nums.size(); ++i)
-    nums[i] = i;
-    
+  for (size_t i = 0; i < nums.size(); ++i)
+    nums[i] = static_cast<int>(i);
+
   // 2. Un objetivo imposible garantiza el ABSOLUTO peor caso matemático
-  int target = -1; 
+  int target = -1;
 
   std::size_t naive_time, final_time;
 
