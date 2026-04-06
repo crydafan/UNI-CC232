@@ -22,6 +22,10 @@ add_executable(two_sum_no_solution_test tests/two_sum_no_solution_test.cc src/tw
 target_include_directories(two_sum_no_solution_test PUBLIC include)
 add_test(NAME two_sum_no_solution_test COMMAND two_sum_no_solution_test)
 
+add_executable(two_sum_find_later_test tests/two_sum_find_later_test.cc src/two_sum.cc)
+target_include_directories(two_sum_find_later_test PUBLIC include)
+add_test(NAME two_sum_find_later_test COMMAND two_sum_find_later_test)
+
 add_executable(two_sum_naive_basic_test tests/two_sum_naive_basic_test.cc src/two_sum.cc)
 target_include_directories(two_sum_naive_basic_test PUBLIC include)
 add_test(NAME two_sum_naive_basic_test COMMAND two_sum_naive_basic_test)
@@ -37,3 +41,7 @@ add_test(NAME two_sum_naive_dup_values_test COMMAND two_sum_naive_dup_values_tes
 add_executable(two_sum_naive_no_solution_test tests/two_sum_naive_no_solution_test.cc src/two_sum.cc)
 target_include_directories(two_sum_naive_no_solution_test PUBLIC include)
 add_test(NAME two_sum_naive_no_solution_test COMMAND two_sum_naive_no_solution_test)
+
+add_executable(two_sum_naive_all_branches_test tests/two_sum_naive_all_branches_test.cc src/two_sum.cc)
+target_include_directories(two_sum_naive_all_branches_test PUBLIC include)
+add_test(NAME two_sum_naive_all_branches_test COMMAND two_sum_naive_all_branches_test)
