@@ -1,0 +1,123 @@
+Start testing: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+----------------------------------------------------------
+1/8 Testing: two_sum_basic_test
+1/8 Test: two_sum_basic_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_basic_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_basic_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_basic_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_basic_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/8 Testing: two_sum_diff_indices_test
+2/8 Test: two_sum_diff_indices_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_diff_indices_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_diff_indices_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_diff_indices_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_diff_indices_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: two_sum_dup_values_test
+3/8 Test: two_sum_dup_values_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_dup_values_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_dup_values_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_dup_values_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_dup_values_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: two_sum_no_solution_test
+4/8 Test: two_sum_no_solution_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_no_solution_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_no_solution_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_no_solution_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_no_solution_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/8 Testing: two_sum_naive_basic_test
+5/8 Test: two_sum_naive_basic_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_naive_basic_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_naive_basic_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_naive_basic_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_naive_basic_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/8 Testing: two_sum_naive_diff_indices_test
+6/8 Test: two_sum_naive_diff_indices_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_naive_diff_indices_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_naive_diff_indices_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_naive_diff_indices_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_naive_diff_indices_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/8 Testing: two_sum_naive_dup_values_test
+7/8 Test: two_sum_naive_dup_values_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_naive_dup_values_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_naive_dup_values_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_naive_dup_values_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_naive_dup_values_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: two_sum_naive_no_solution_test
+8/8 Test: two_sum_naive_no_solution_test
+Command: "C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/two_sum_naive_no_solution_test.exe"
+Directory: C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1
+"two_sum_naive_no_solution_test" start time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"two_sum_naive_no_solution_test" end time: Apr 05 13:52 Hora est. Pacífico, Sudamérica
+"two_sum_naive_no_solution_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 05 13:52 Hora est. Pacífico, Sudamérica

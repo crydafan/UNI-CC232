@@ -5,7 +5,8 @@
 
 #include "two_sum.hh"
 
-static constexpr size_t BENCH_VECTOR_ELEMENTS = 10000;
+// 1. Aumentamos el tamaño a 50,000 para que el algoritmo demore lo suficiente
+static constexpr size_t BENCH_VECTOR_ELEMENTS = 50000;
 
 int main() {
   std::vector<int> nums;
@@ -13,7 +14,9 @@ int main() {
 
   for (int i = 0; i < nums.size(); ++i)
     nums[i] = i;
-  int target = nums[nums.size() - 1] + nums[nums.size() - 2];
+    
+  // 2. Un objetivo imposible garantiza el ABSOLUTO peor caso matemático
+  int target = -1; 
 
   std::size_t naive_time, final_time;
 
@@ -35,6 +38,7 @@ int main() {
             .count();
   }
 
-  std::cout << "naive took " << naive_time << " ms to complete\n";
-  std::cout << "final took " << final_time << " ms to complete\n";
+  // 3. Corregimos el texto a "us" (microsegundos) para ser precisos
+  std::cout << "naive took " << naive_time << " us to complete\n";
+  std::cout << "final took " << final_time << " us to complete\n";
 }

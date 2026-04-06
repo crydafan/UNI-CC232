@@ -1,0 +1,123 @@
+File 'C:/msys64/ucrt64/include/c++/15.2.0/tuple'
+Lines executed:100.00% of 24
+No branches
+Calls executed:100.00% of 8
+Creating 'tuple.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/new_allocator.h'
+Lines executed:52.38% of 42
+Branches executed:44.44% of 18
+Taken at least once:22.22% of 18
+Calls executed:41.18% of 17
+Creating 'new_allocator.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/move.h'
+Lines executed:75.00% of 4
+No branches
+No calls
+Creating 'move.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h'
+Lines executed:100.00% of 8
+No branches
+Calls executed:100.00% of 2
+Creating 'aligned_buffer.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable_policy.h'
+Lines executed:90.74% of 108
+Branches executed:100.00% of 16
+Taken at least once:62.50% of 16
+Calls executed:77.08% of 48
+Creating 'hashtable_policy.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/allocator.h'
+Lines executed:75.00% of 4
+No branches
+Calls executed:37.50% of 8
+Creating 'allocator.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/alloc_traits.h'
+Lines executed:83.33% of 6
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:62.50% of 8
+Creating 'alloc_traits.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/ptr_traits.h'
+Lines executed:100.00% of 9
+No branches
+No calls
+Creating 'ptr_traits.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h'
+Lines executed:77.69% of 121
+Branches executed:75.00% of 48
+Taken at least once:50.00% of 48
+Calls executed:76.92% of 52
+Creating 'hashtable.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_function.h'
+Lines executed:100.00% of 2
+No branches
+No calls
+Creating 'stl_function.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h'
+Lines executed:0.00% of 10
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 1
+Creating 'stl_uninitialized.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator.h'
+Lines executed:0.00% of 1
+No branches
+No calls
+Creating 'stl_iterator.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_vector.h'
+Lines executed:5.77% of 52
+Branches executed:16.67% of 12
+Taken at least once:8.33% of 12
+Calls executed:3.70% of 27
+Creating 'stl_vector.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/initializer_list'
+Lines executed:0.00% of 3
+No branches
+Calls executed:0.00% of 2
+Creating 'initializer_list.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/unordered_map.h'
+Lines executed:100.00% of 7
+No branches
+Calls executed:100.00% of 4
+Creating 'unordered_map.h.gcov'
+
+File 'C:/Users/Enrique/UNI-CC232/assignments/assignment_1/src/two_sum.cc'
+Lines executed:53.33% of 15
+Branches executed:60.00% of 20
+Taken at least once:35.00% of 20
+Calls executed:57.89% of 19
+Creating 'two_sum.cc.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h'
+Lines executed:0.00% of 4
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+No calls
+Creating 'stl_algobase.h.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/new'
+Lines executed:50.00% of 4
+No branches
+No calls
+Creating 'new.gcov'
+
+File 'C:/msys64/ucrt64/include/c++/15.2.0/bits/functional_hash.h'
+Lines executed:100.00% of 1
+No branches
+No calls
+Creating 'functional_hash.h.gcov'
+
+Lines executed:68.00% of 425
