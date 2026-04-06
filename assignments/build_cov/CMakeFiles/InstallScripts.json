@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/Enrique/UNI-CC232/assignments/build_cov/cmake_install.cmake",
-		"C:/Users/Enrique/UNI-CC232/assignments/build_cov/assignment_1/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
