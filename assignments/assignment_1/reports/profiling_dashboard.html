@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Experimental - Two Sum</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .chart-container { position: relative; height: 40vh; width: 80vw; max-width: 800px; margin: 30px auto; }
+        .conclusion { background: #e8f4f8; border-left: 5px solid #3498db; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .math { font-family: 'Courier New', Courier, monospace; background: #eee; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reporte de Profiling y Complejidad Algorítmica</h1>
+        <p><strong>Autor:</strong> Enrique | <strong>Proyecto:</strong> PC1 Algoritmos</p>
+
+        <h2>1. Análisis de Tiempo Real (Benchmark)</h2>
+        <p>Se evaluó el comportamiento de dos enfoques para el problema "Two Sum" frente a un caso de prueba extremo (N = 50,000, objetivo inalcanzable).</p>
+        
+        <div class="chart-container">
+            <canvas id="timeChart"></canvas>
+        </div>
+
+        <div class="conclusion">
+            <strong>Conclusión Empírica:</strong> La diferencia es abismal. Mientras la fuerza bruta tardó aproximadamente 11 segundos, la implementación de STL <span class="math">std::unordered_map</span> (que ofrece accesos <span class="math">O(1)</span>) resolvió el mismo problema en apenas 12 milisegundos. El algoritmo final es <strong>854 veces más rápido</strong>.
+        </div>
+
+        <h2>2. Análisis de Costo Computacional (gprof)</h2>
+        <p>Utilizando la herramienta de profiling <span class="math">gprof</span>, analizamos por qué el algoritmo Naive es tan lento. La herramienta reveló la cantidad exacta de veces que el procesador tuvo que acceder al arreglo.</p>
+
+        <div class="chart-container">
+            <canvas id="callsChart"></canvas>
+        </div>
+
+        <div class="conclusion">
+            <strong>Demostración del O(n²):</strong> El reporte de gprof indicó que la función <span class="math">std::vector::operator[]</span> fue llamada exactamente <strong>2,500,050,000 veces</strong>. Dado que nuestro <span class="math">N = 50,000</span>, la relación matemática <span class="math">N² = 2,500,000,000</span> se cumple a la perfección. Hemos demostrado experimentalmente el límite asintótico cuadrático de la fuerza bruta.
+        </div>
+    </div>
+
+    <script>
+        // Gráfico 1: Tiempos
+        const ctxTime = document.getElementById('timeChart').getContext('2d');
+        new Chart(ctxTime, {
+            type: 'bar',
+            data: {
+                labels: ['Fuerza Bruta (Naive)', 'Hash Map (Optimizado)'],
+                datasets: [{
+                    label: 'Tiempo de Ejecución (Microsegundos)',
+                    data: [11025876, 12914],
+                    backgroundColor: ['rgba(231, 76, 60, 0.7)', 'rgba(46, 204, 113, 0.7)'],
+                    borderColor: ['rgba(192, 57, 43, 1)', 'rgba(39, 174, 96, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { type: 'logarithmic', title: { display: true, text: 'Microsegundos (Escala Logarítmica)' } } },
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // Gráfico 2: Llamadas (Complejidad)
+        const ctxCalls = document.getElementById('callsChart').getContext('2d');
+        new Chart(ctxCalls, {
+            type: 'bar',
+            data: {
+                labels: ['Elementos (N)', 'Accesos al Vector (N²)'],
+                datasets: [{
+                    label: 'Cantidad',
+                    data: [50000, 2500050000],
+                    backgroundColor: ['rgba(52, 152, 219, 0.7)', 'rgba(155, 89, 182, 0.7)'],
+                    borderColor: ['rgba(41, 128, 185, 1)', 'rgba(142, 68, 173, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { type: 'logarithmic', title: { display: true, text: 'Cantidad (Escala Logarítmica)' } } },
+                plugins: { legend: { display: false } }
+            }
+        });
+    </script>
+</body>
+</html>
