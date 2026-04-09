@@ -85,7 +85,7 @@ El bucle recorre como máximo `n` elementos y en cada iteración realiza operaci
 
 \* El mejor caso de `two_sum` sería O(1) si los dos primeros elementos son la solución (el segundo elemento encuentra a su complemento ya insertado en el mapa). En la práctica, siempre es al menos O(2) ya que el mapa empieza vacío.
 
-\\** El mejor caso de `two_sum_naive` es O(1) si `nums[0] + nums[1] == target`.
+\*\* El mejor caso de `two_sum_naive` es O(1) si `nums[0] + nums[1] == target`.
 
 ### Complejidad espacial
 
