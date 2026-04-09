@@ -9,20 +9,20 @@
 
 **Two Sum** - [LeetCode #1](https://leetcode.com/problems/two-sum/)
 
-### Especificacion
+### Especificación
 
 - **Entrada**: `vector<int> nums`, `int target`
-- **Salida**: `vector<int>` con los dos indices `i`, `j` tales que `nums[i] + nums[j] == target`
-- **Restriccion**: Existe exactamente una solucion y no se puede usar el mismo elemento dos veces.
-- **Tamano de entrada relevante**: `n = nums.size()`
+- **Salida**: `vector<int>` con los dos índices `i`, `j` tales que `nums[i] + nums[j] == target`
+- **Restricción**: Existe exactamente una solución y no se puede usar el mismo elemento dos veces.
+- **Tamaño de entrada relevante**: `n = nums.size()`
 
 ---
 
-## Descripcion de la solucion
+## Descripción de la solución
 
-### Solucion final: Hash Map (`two_sum`)
+### Solución final: Hash Map (`two_sum`)
 
-Se utiliza un `std::unordered_map<int, int>` para almacenar los valores ya visitados y sus indices. En cada iteracion se calcula el complemento (`target - nums[i]`) y se busca en el mapa. Si existe, se retornan ambos indices; si no, se inserta el elemento actual en el mapa.
+Se utiliza un `std::unordered_map<int, int>` para almacenar los valores ya visitados y sus índices. En cada iteración se calcula el complemento (`target - nums[i]`) y se busca en el mapa. Si existe, se retornan ambos índices; si no, se inserta el elemento actual en el mapa.
 
 ```cpp
 std::vector<int> two_sum(const std::vector<int> &nums, int target) {
@@ -37,7 +37,7 @@ std::vector<int> two_sum(const std::vector<int> &nums, int target) {
 }
 ```
 
-### Solucion ingenua: Fuerza bruta (`two_sum_naive`)
+### Solución ingenua: Fuerza bruta (`two_sum_naive`)
 
 Dos bucles anidados que prueban todas las combinaciones posibles de pares `(i, j)`.
 
@@ -53,27 +53,27 @@ std::vector<int> two_sum_naive(const std::vector<int> &nums, int target) {
 
 ---
 
-## Analisis del algoritmo
+## Análisis del algoritmo
 
 ### Determinismo
 
-Si. Para la misma entrada (`nums`, `target`) siempre produce la misma salida. El `unordered_map` puede tener orden interno variable, pero la primera coincidencia encontrada durante la iteracion lineal es siempre la misma.
+Si. Para la misma entrada (`nums`, `target`) siempre produce la misma salida. El `unordered_map` puede tener orden interno variable, pero la primera coincidencia encontrada durante la iteración lineal es siempre la misma.
 
 ### Factibilidad
 
-El algoritmo es factible: opera en tiempo y espacio polinomicos (lineales) sobre la entrada.
+El algoritmo es factible: opera en tiempo y espacio polinómicos (lineales) sobre la entrada.
 
 ### Finitud
 
-El bucle recorre como maximo `n` elementos y en cada iteracion realiza operaciones O(1) amortizadas. El algoritmo siempre termina.
+El bucle recorre como máximo `n` elementos y en cada iteración realiza operaciones O(1) amortizadas. El algoritmo siempre termina.
 
 ### Correctitud
 
-**Invariante de bucle**: Al inicio de la iteracion `i`, el mapa `indices` contiene todos los pares `(nums[k], k)` para `0 <= k < i`.
+**Invariante de bucle**: Al inicio de la iteración `i`, el mapa `indices` contiene todos los pares `(nums[k], k)` para `0 <= k < i`.
 
-- **Inicio**: Antes de la primera iteracion, el mapa esta vacio (no hay elementos anteriores). El invariante se cumple trivialmente.
-- **Mantenimiento**: Si el complemento `target - nums[i]` esta en el mapa, se encontro la solucion y se retorna. Si no, se inserta `nums[i]` y el invariante se mantiene para `i+1`.
-- **Terminacion**: Si existe solucion con indices `(a, b)` donde `a < b`, cuando `i = b` el valor `nums[a]` ya esta en el mapa, y el complemento `target - nums[b] = nums[a]` sera encontrado. Si no existe solucion, se recorre todo el vector y se retorna `{}`.
+- **Inicio**: Antes de la primera iteración, el mapa está vacío (no hay elementos anteriores). El invariante se cumple trivialmente.
+- **Mantenimiento**: Si el complemento `target - nums[i]` está en el mapa, se encontró la solución y se retorna. Si no, se inserta `nums[i]` y el invariante se mantiene para `i+1`.
+- **Terminación**: Si existe solución con índices `(a, b)` donde `a < b`, cuando `i = b` el valor `nums[a]` ya está en el mapa, y el complemento `target - nums[b] = nums[a]` será encontrado. Si no existe solución, se recorre todo el vector y se retorna `{}`.
 
 ### Complejidad temporal
 
@@ -83,9 +83,9 @@ El bucle recorre como maximo `n` elementos y en cada iteracion realiza operacion
 | Caso promedio | **O(n)** | O(n^2) |
 | Peor caso | O(n) amortizado, O(n^2) si muchas colisiones | O(n^2) |
 
-\* El mejor caso de `two_sum` seria O(1) si los dos primeros elementos son la solucion (el segundo elemento encuentra a su complemento ya insertado en el mapa). En la practica, siempre es al menos O(2) ya que el mapa empieza vacio.
+\* El mejor caso de `two_sum` sería O(1) si los dos primeros elementos son la solución (el segundo elemento encuentra a su complemento ya insertado en el mapa). En la práctica, siempre es al menos O(2) ya que el mapa empieza vacío.
 
-\** El mejor caso de `two_sum_naive` es O(1) si `nums[0] + nums[1] == target`.
+\\** El mejor caso de `two_sum_naive` es O(1) si `nums[0] + nums[1] == target`.
 
 ### Complejidad espacial
 
@@ -94,22 +94,22 @@ El bucle recorre como maximo `n` elementos y en cada iteracion realiza operacion
 | `two_sum` | O(n) |
 | `two_sum_naive` | O(1) |
 
-La solucion final usa O(n) espacio adicional para el `unordered_map`. La solucion ingenua solo usa variables auxiliares.
+La solución final usa O(n) espacio adicional para el `unordered_map`. La solución ingenua solo usa variables auxiliares.
 
-### Jerarquia de crecimiento
+### Jerarquía de crecimiento
 
-O(n) (lineal) para la solucion final. El cambio de O(n^2) a O(n) es una mejora asintotica fundamental.
+O(n) (lineal) para la solución final. El cambio de O(n^2) a O(n) es una mejora asintótica fundamental.
 
 ### Robustez
 
-- Maneja numeros negativos, ceros y duplicados correctamente.
-- Si no existe solucion (aunque el problema lo garantiza), retorna un vector vacio `{}` por seguridad.
+- Maneja números negativos, ceros y duplicados correctamente.
+- Si no existe solución (aunque el problema lo garantiza), retorna un vector vacío `{}` por seguridad.
 
-### Degeneracion
+### Degeneración
 
-Si todos los elementos del vector producen colisiones en el hash (mismos buckets), `unordered_map::find` degrada de O(1) a O(n), llevando el algoritmo a O(n^2). En C++17 con la politica de rehashing por defecto, este escenario es extremadamente improbable para entradas tipicas.
+Si todos los elementos del vector producen colisiones en el hash (mismos buckets), `unordered_map::find` degrada de O(1) a O(n), llevando el algoritmo a O(n^2). En C++17 con la política de rehashing por defecto, este escenario es extremadamente improbable para entradas típicas.
 
-### Reutilizacion
+### Reutilización
 
 Las funciones `two_sum` y `two_sum_naive` son independientes, sin estado global ni efectos secundarios. Reciben datos por referencia constante y retornan el resultado por valor. Son directamente reutilizables en cualquier contexto.
 
@@ -124,8 +124,8 @@ assignment_1/
 ├── include/
 │   └── two_sum.hh              # Declaraciones de ambas funciones
 ├── src/
-│   ├── two_sum.cc              # Implementacion de two_sum y two_sum_naive
-│   └── main.cc                 # Punto de entrada basico
+│   ├── two_sum.cc              # Implementación de two_sum y two_sum_naive
+│   └── main.cc                 # Punto de entrada básico
 ├── tests/
 │   ├── two_sum_basic_test.cc
 │   ├── two_sum_diff_indices_test.cc
@@ -148,7 +148,7 @@ assignment_1/
 
 ---
 
-## Instrucciones de compilacion y ejecucion
+## Instrucciones de compilación y ejecución
 
 ### Requisitos
 
@@ -157,7 +157,7 @@ assignment_1/
 - Ninja (opcional, recomendado)
 - gcovr (para cobertura: `pip install gcovr`)
 
-### Compilacion basica
+### Compilación básica
 
 ```bash
 cd assignments
@@ -210,16 +210,16 @@ gprof ./build/assignment_1/two_sum_bench gmon.out
 
 ### Benchmark (N = 50,000, peor caso)
 
-| Algoritmo | Complejidad | Tiempo empirico |
+| Algoritmo | Complejidad | Tiempo empírico |
 |-----------|:-----------:|:---------------:|
 | `two_sum_naive` (fuerza bruta) | O(n^2) | ~11,025,876 us (~11.0s) |
 | `two_sum` (hash map) | O(n) | ~12,914 us (~0.01s) |
 
-La solucion final es **~854x mas rapida** que la ingenua.
+La solución final es **~854x más rápida** que la ingenua.
 
-### Tabla de builds (optimizacion del compilador)
+### Tabla de builds (optimización del compilador)
 
-| Build | Naive (us) | Final (us) | Speedup vs -O0 | Facilidad depuracion |
+| Build | Naive (us) | Final (us) | Speedup vs -O0 | Facilidad depuración |
 |:-----:|:----------:|:----------:|:--------------:|:--------------------:|
 | `-O0` | ~22,000,000 | ~25,000 | 1x (base) | Excelente |
 | `-Og` | ~14,000,000 | ~16,000 | ~1.6x | Buena |
@@ -234,30 +234,30 @@ No se detectaron errores de memoria (AddressSanitizer) ni comportamiento indefin
 
 ### Cobertura
 
-El archivo principal `src/two_sum.cc` alcanza **100% de cobertura de ramas**. Todas las ramas de ambas funciones (`two_sum` y `two_sum_naive`) fueron ejercitadas por los tests, incluyendo los caminos de retorno vacio (sin solucion).
+El archivo principal `src/two_sum.cc` alcanza **100% de cobertura de ramas**. Todas las ramas de ambas funciones (`two_sum` y `two_sum_naive`) fueron ejercitadas por los tests, incluyendo los caminos de retorno vacío (sin solución).
 
 ### Profiling (gprof)
 
-El profiling confirma que `two_sum_naive` y sus operaciones de acceso al vector concentran >99% del tiempo de ejecucion (descontando overhead de instrumentacion). Las operaciones del `unordered_map` usadas por `two_sum` representan un tiempo despreciable (0.00%).
+El profiling confirma que `two_sum_naive` y sus operaciones de acceso al vector concentran >99% del tiempo de ejecución (descontando overhead de instrumentación). Las operaciones del `unordered_map` usadas por `two_sum` representan un tiempo despreciable (0.00%).
 
-### Microoptimizacion vs. algoritmo
+### Microoptimización vs. algoritmo
 
-La mejora maxima por flags del compilador es ~6.9x (constante). La mejora por cambio de algoritmo es ~854x para N = 50,000, y **crece con N** por la diferencia asintotica. La optimizacion algoritmica es siempre la primera prioridad.
+La máxima por flags del compilador es ~6.9x (constante). La mejora por cambio de algoritmo es ~854x para N = 50,000, y **crece con N** por la diferencia asintótica. La optimización algorítmica es siempre la primera prioridad.
 
 ---
 
 ## Reportes detallados
 
-- [`reports/optimization_report.md`](reports/optimization_report.md) - Comparativa de builds y analisis de flags
-- [`reports/profiling_report.md`](reports/profiling_report.md) - Analisis con gprof
-- [`reports/coverage_report.md`](reports/coverage_report.md) - Cobertura de lineas y ramas
+- [`reports/optimization_report.md`](reports/optimization_report.md) - Comparativa de builds y análisis de flags
+- [`reports/profiling_report.md`](reports/profiling_report.md) - Análisis con gprof
+- [`reports/coverage_report.md`](reports/coverage_report.md) - Cobertura de líneas y ramas
 
 ---
 
 ## Uso de Copilot/IA
 
-Se utilizo GitHub Copilot como asistente para:
-- Generacion de plantillas de tests y estructura del benchmark.
-- Revision de la estructura del README.
+Se utilizó GitHub Copilot como asistente para:
+- Generación de plantillas de pruebas y estructura del benchmark.
+- Revisión de la estructura del README.
 
-Todo el codigo generado fue revisado, validado y ajustado manualmente. Las decisiones algoritmicas y de diseno fueron tomadas por los integrantes del equipo.
+Todo el código generado fue revisado, validado y ajustado manualmente. Las decisiones algorítmicas y de diseño fueron tomadas por los integrantes del equipo.
